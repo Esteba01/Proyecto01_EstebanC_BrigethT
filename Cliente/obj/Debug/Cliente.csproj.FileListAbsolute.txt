@@ -1,0 +1,7 @@
+C:\Users\esdac\OneDrive - Escuela Politécnica Nacional\Universidad\7 Septimo semestre\Aplicaciones Distribuidas\Proyecto 1\Proyecto01_EstebanC_BrigethT\Cliente\bin\Debug\Cliente.exe.config
+C:\Users\esdac\OneDrive - Escuela Politécnica Nacional\Universidad\7 Septimo semestre\Aplicaciones Distribuidas\Proyecto 1\Proyecto01_EstebanC_BrigethT\Cliente\bin\Debug\Cliente.exe
+C:\Users\esdac\OneDrive - Escuela Politécnica Nacional\Universidad\7 Septimo semestre\Aplicaciones Distribuidas\Proyecto 1\Proyecto01_EstebanC_BrigethT\Cliente\bin\Debug\Cliente.pdb
+C:\Users\esdac\OneDrive - Escuela Politécnica Nacional\Universidad\7 Septimo semestre\Aplicaciones Distribuidas\Proyecto 1\Proyecto01_EstebanC_BrigethT\Cliente\obj\Debug\Cliente.csproj.AssemblyReference.cache
+C:\Users\esdac\OneDrive - Escuela Politécnica Nacional\Universidad\7 Septimo semestre\Aplicaciones Distribuidas\Proyecto 1\Proyecto01_EstebanC_BrigethT\Cliente\obj\Debug\Cliente.csproj.CoreCompileInputs.cache
+C:\Users\esdac\OneDrive - Escuela Politécnica Nacional\Universidad\7 Septimo semestre\Aplicaciones Distribuidas\Proyecto 1\Proyecto01_EstebanC_BrigethT\Cliente\obj\Debug\Cliente.exe
+C:\Users\esdac\OneDrive - Escuela Politécnica Nacional\Universidad\7 Septimo semestre\Aplicaciones Distribuidas\Proyecto 1\Proyecto01_EstebanC_BrigethT\Cliente\obj\Debug\Cliente.pdb
