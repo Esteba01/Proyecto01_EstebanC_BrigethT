@@ -14,8 +14,11 @@ namespace Cliente
         {
             try
             {
+                Console.WriteLine("--------- mantenTuPeso.co GYM ---------");
                 Console.WriteLine("Ingrese la acción (1. Calcular IMC, 2. Ver Historial):");
                 int action = int.Parse(Console.ReadLine());
+
+                Console.Clear();
 
                 if (action == 1)
                 {
@@ -27,7 +30,7 @@ namespace Cliente
                 }
                 else
                 {
-                    Console.WriteLine("Acción no válida.");
+                    Console.WriteLine("Opción no existente");
                 }
             }
             catch (Exception ex)
