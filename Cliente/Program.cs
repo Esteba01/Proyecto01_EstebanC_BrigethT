@@ -14,19 +14,20 @@ namespace Cliente
         {
             try
             {
-                Console.WriteLine("--------- mantenTuPeso.co GYM ---------");
-                Console.WriteLine("Ingrese la acción (1. Calcular IMC, 2. Ver Historial):");
-                int action = int.Parse(Console.ReadLine());
+                Console.WriteLine(" --------- mantenTuPeso.co GYM --------- \n\n"); //Mensaje de bienvenida
+                Console.WriteLine(" Ingrese la acción que desea solicitar:\n");
+                Console.WriteLine(" 1. Calcular IMC       2. Ver Historial");//Opciones de peticion
+                int action = int.Parse(Console.ReadLine());//se obtiene la entrada del usuario y se convierte a un int con parse
 
-                Console.Clear();
+                Console.Clear(); //Se limpia la consola 
 
                 if (action == 1)
                 {
-                    CalculateIMC();
+                    CalculoIMC();
                 }
                 else if (action == 2)
                 {
-                    ViewHistory();
+                    VerHistorial();
                 }
                 else
                 {
@@ -39,42 +40,42 @@ namespace Cliente
             }
             finally
             {
-                Console.WriteLine("Presione cualquier tecla para salir...");
+                Console.WriteLine("\n   Presione cualquier tecla para salir...");
                 Console.ReadKey();
             }
         }
 
-        static void CalculateIMC()
+        static void CalculoIMC()
         {
             try
             {
-                TcpClient client = new TcpClient("127.0.0.1", 8888);
-                NetworkStream stream = client.GetStream();
+                TcpClient cliente = new TcpClient("127.0.0.1", 8888);
+                NetworkStream stream = cliente.GetStream();
 
                 Console.WriteLine("Ingrese su nombre:");
-                string name = Console.ReadLine();
+                string nombre = Console.ReadLine();
                 Console.WriteLine("Ingrese la fecha (yyyy-mm-dd):");
-                string date = Console.ReadLine();
+                string fecha = Console.ReadLine();
                 Console.WriteLine("Ingrese el peso:");
-                double weight = double.Parse(Console.ReadLine());
+                double peso = double.Parse(Console.ReadLine());
                 Console.WriteLine("Ingrese la unidad de peso (kg, lb):");
-                string weightUnit = Console.ReadLine();
+                string unidadpeso = Console.ReadLine();
                 Console.WriteLine("Ingrese la altura:");
-                double height = double.Parse(Console.ReadLine());
+                double altura = double.Parse(Console.ReadLine());
                 Console.WriteLine("Ingrese la unidad de altura (m, in):");
-                string heightUnit = Console.ReadLine();
+                string alturaunidad = Console.ReadLine();
 
-                string message = $"{date},{weight},{weightUnit},{height},{heightUnit},{name}";
-                byte[] data = Encoding.ASCII.GetBytes(message);
+                string mensaje = $"{nombre},{fecha},{peso},{unidadpeso},{altura},{alturaunidad}";//Delimitacion de campos por comas
+                byte[] data = Encoding.ASCII.GetBytes(mensaje);
                 stream.Write(data, 0, data.Length);
 
-                byte[] buffer = new byte[1024];
+                byte[] buffer = new byte[1024]; 
                 int bytesRead = stream.Read(buffer, 0, buffer.Length);
                 string response = Encoding.ASCII.GetString(buffer, 0, bytesRead);
 
                 Console.WriteLine($"Respuesta del servidor: {response}");
 
-                client.Close();
+                cliente.Close();
             }
             catch (Exception ex)
             {
@@ -82,17 +83,17 @@ namespace Cliente
             }
         }
 
-        static void ViewHistory()
+        static void VerHistorial()
         {
             try
             {
-                TcpClient client = new TcpClient("127.0.0.1", 8888);
-                NetworkStream stream = client.GetStream();
+                TcpClient cliente = new TcpClient("127.0.0.1", 8888);
+                NetworkStream stream = cliente.GetStream();
 
                 Console.WriteLine("Ingrese su nombre:");
-                string name = Console.ReadLine();
+                string nombre = Console.ReadLine();
 
-                string message = $"HISTORIAL,{name}";
+                string message = $"HISTORIAL,{nombre}";
                 byte[] data = Encoding.ASCII.GetBytes(message);
                 stream.Write(data, 0, data.Length);
 
@@ -102,7 +103,7 @@ namespace Cliente
 
                 Console.WriteLine($"Historial:\n{response}");
 
-                client.Close();
+                cliente.Close();
             }
             catch (Exception ex)
             {

@@ -14,7 +14,7 @@ namespace Servidor
     {
         static void Main(string[] args)
         {
-            TcpListener server = new TcpListener(IPAddress.Any, 8888); //Defino un socket para escuchar
+            TcpListener server = new TcpListener(IPAddress.Any, 8888); //Defino un socket para escucha con protocolo TCP
             server.Start();
             Console.WriteLine("Servidor de mantenTuPeso.co");
             Console.WriteLine("Servidor iniciado...");
