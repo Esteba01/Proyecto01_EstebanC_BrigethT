@@ -13,7 +13,7 @@ namespace Cliente
         static void Main(string[] args)
         {
 
-            bool continuar = true;
+            bool continuar = true; //Booleano, nos servirá para ver si el programa sigue corriendo o se quiere finalizar
 
             while (continuar)
             {
@@ -28,26 +28,24 @@ namespace Cliente
                     while (action != 1 && action != 2)
                     {
                         Console.WriteLine(" Ingrese la acción que desea solicitar:\n");
-                        Console.WriteLine(" 1. Calcular IMC       2. Ver Historial");
+                        Console.WriteLine(" 1. Calcular IMC       2. Ver Historial"); //Pregunta de cual opcion a utilizar
 
-                        if (!int.TryParse(Console.ReadLine(), out action) || (action != 1 && action != 2))
+                        if (!int.TryParse(Console.ReadLine(), out action) || (action != 1 && action != 2)) //Se evalúa si la opcion ingresada coincide con las unicas disponibles
                         {
                             Console.WriteLine("Opción no existente, por favor ingrese una opción válida.");
-                            action = 0; // Reset action to continue the loop
+                            action = 0; // Se resetea la acción para otra vez preguntar 
                         }
                     }
-
-
 
                     Console.Clear(); //Se limpia la consola 
 
                     if (action == 1)
                     {
-                        CalculoIMC();
+                        CalculoIMC(); //La eleccion 1 llama al metodo de calculo IMC
                     }
                     else if (action == 2)
                     {
-                        VerHistorial();
+                        VerHistorial(); //La opcion 2 brinda el historico
                     }
 
                     continuar = PreguntarContinuar(); //Llama al metodo para preguntar si quiere continuar
@@ -55,19 +53,19 @@ namespace Cliente
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"Error: {ex.Message}");
-                    continuar = PreguntarContinuar();
+                    Console.WriteLine($"Error: {ex.Message}"); //Se controla una posible excepcion mostrando el mensaje generado
+                    continuar = PreguntarContinuar(); //Si se cierra el programa o se vuelve al inicio
                 }
             }    
         }
 
-        static void CalculoIMC()
+        static void CalculoIMC() //Metodo para enviar datos al servidor y esperar el calculo del IMC
         {
             try
             {
 
                 TcpClient cliente = new TcpClient("127.0.0.1", 8080); // Crea un cliente TCP que se conecta al servidor en la dirección IP 127.0.0.1 (localhost) y el puerto 8888.
-                NetworkStream stream = cliente.GetStream();// Obtiene el flujo de datos(NEtworStream, metodo para enviar y recibir datos) de la conexión del cliente.
+                NetworkStream stream = cliente.GetStream();// Obtiene el flujo de datos (NEtworStream, metodo para enviar y recibir datos) de la conexión del cliente.
 
                 Console.WriteLine("Ingrese su nombre:");
                 string nombre = Console.ReadLine(); //Almacenamiento de nombre del cliente
@@ -76,16 +74,16 @@ namespace Cliente
                 {
                     Console.WriteLine("Ingrese la fecha (yyyy-mm-dd):");
                     fecha = Console.ReadLine();
-                    if (DateTime.TryParse(fecha, out DateTime parsedFecha))
+                    if (DateTime.TryParse(fecha, out DateTime parsedFecha)) //Se valida que la fecha tenga el formato adecuado y coincida
                     {
-                        if (parsedFecha.Date == DateTime.Now.Date) //Se verifica que la fecha coincida con la del sistema
+                        if (parsedFecha.Date == DateTime.Now.Date) //Se verifica que la fecha coincida con la del sistema (actual)
                             break;
                         else
-                            Console.WriteLine("Fecha no corresponde al día actual, por favor ingrese nuevamente.");
+                            Console.WriteLine("Fecha no corresponde al día actual, por favor ingrese nuevamente."); //Si falla el día
                     }
                     else
                     {
-                        Console.WriteLine("Formato de fecha incorrecto, por favor ingrese nuevamente.");
+                        Console.WriteLine("Formato de fecha incorrecto, por favor ingrese nuevamente."); //Si falla el formato
                     }
                 }
 
@@ -94,32 +92,46 @@ namespace Cliente
                 {
                     Console.WriteLine("Ingrese la unidad de peso (g, kg, lb, oz):");//Se pregunta que unidadd e peso utilizará
                     unidadpeso = Console.ReadLine();
-                    if (unidadpeso == "g" || unidadpeso == "kg" || unidadpeso == "lb" || unidadpeso == "oz")
+                    if (unidadpeso == "g" || unidadpeso == "kg" || unidadpeso == "lb" || unidadpeso == "oz") //De igual manera se evalúa si la opcion ingresada coincide
                         break;
                     else
-                        Console.WriteLine("Valor no existente, por favor ingrese una unidad de peso válida.");
+                        Console.WriteLine("Valor no existente, por favor ingrese una unidad de peso válida."); //Mensaje para que vuelva a intentar
                 }
- 
-                Console.WriteLine("Ingrese el peso:");//Ingreso del peso
-                double peso = double.Parse(Console.ReadLine());
+
+                double peso;
+                while (true)
+                {
+                    Console.WriteLine("Ingrese el peso (en "+unidadpeso.ToString()+"):"); //Ingreso del peso
+                    if (double.TryParse(Console.ReadLine(), out peso) && peso > 0) // Validación para asegurar que el peso sea un valor mayor a cero
+                        break;
+                    else
+                        Console.WriteLine("Peso inválido, por favor ingrese un valor positivo mayor que cero.");
+                }
 
 
                 string unidadaltura;
                 while (true)
                 {
-                    Console.WriteLine("Ingrese la unidad de altura (cm, m, plg, ft):");
+                    Console.WriteLine("Ingrese la unidad de altura (cm, m, plg, ft):"); //Se valida tambien las unidades de medida para la altura, si es que coinciden
                     unidadaltura = Console.ReadLine();
                     if (unidadaltura == "cm" || unidadaltura == "m" || unidadaltura == "plg" || unidadaltura == "ft")
                         break;
                     else
                         Console.WriteLine("Valor no existente, por favor ingrese una unidad de altura válida.");
                 }
-                Console.WriteLine("Ingrese la altura:");
-                double altura = double.Parse(Console.ReadLine());
+                double altura;
+                while (true)
+                {
+                    Console.WriteLine("Ingrese la altura (en " + unidadaltura.ToString() + "):");
+                    if (double.TryParse(Console.ReadLine(), out altura) && altura > 0) // Validación para asegurar que la altura sea un valor mayor que cero
+                        break;
+                    else
+                        Console.WriteLine("Altura inválida, por favor ingrese un valor positivo mayor que cero.");
+                }
 
-                string mensaje = $"{nombre},{fecha},{unidadpeso},{peso},{unidadaltura},{altura}"; //Diseño del mensaje a enviar
+                string mensaje = $"{nombre},{fecha},{unidadpeso},{peso},{unidadaltura},{altura}"; //Diseño del mensaje a enviar al servidor
                 byte[] data = Encoding.ASCII.GetBytes(mensaje); //se convierte el mensaje a un arreglo de bytes denominado data, usando ASCII
-                stream.Write(data, 0, data.Length);//se envía el arreglo de bytes convertidos al servidor a traves del flujo de red stream
+                stream.Write(data, 0, data.Length);//se envía el arreglo de bytes convertidos al servidor a traves del flujo de red stream, desde el inicio hasta la longitud del mensaje, es decir el mensaje completo
 
                 byte[] buffer = new byte[1024]; //creacion buffer de bytes para almacenar datos enviados por servidor.
                 int bytesRead = stream.Read(buffer, 0, buffer.Length); //lee los datos del flujo y se almacena en buffer. El numero de bytes se obtiene con strweam.Read
@@ -170,7 +182,7 @@ namespace Cliente
             }
         }
 
-        static bool PreguntarContinuar()
+        static bool PreguntarContinuar() //Método que sirve para pregntar al cliente si quiere finalizar o quiere volver al inicio del programa
         {
             while (true)
             {
@@ -179,7 +191,7 @@ namespace Cliente
                 Console.WriteLine("2. Finalizar");
                 string opcion = Console.ReadLine();
                 if (opcion == "1")
-                    return true;
+                    return true; //Depediendo la opcion escogida se actualiza el estado del booleano
                 else if (opcion == "2")
                     return false;
                 else

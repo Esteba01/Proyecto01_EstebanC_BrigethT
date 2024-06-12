@@ -1,7 +1,0 @@
-C:\Users\esdac\OneDrive - Escuela Politécnica Nacional\Universidad\7 Septimo semestre\Aplicaciones Distribuidas\Proyecto 1\Proyecto01_EstebanC_BrigethT\Servidor\bin\Debug\Servidor.exe.config
-C:\Users\esdac\OneDrive - Escuela Politécnica Nacional\Universidad\7 Septimo semestre\Aplicaciones Distribuidas\Proyecto 1\Proyecto01_EstebanC_BrigethT\Servidor\bin\Debug\Servidor.exe
-C:\Users\esdac\OneDrive - Escuela Politécnica Nacional\Universidad\7 Septimo semestre\Aplicaciones Distribuidas\Proyecto 1\Proyecto01_EstebanC_BrigethT\Servidor\bin\Debug\Servidor.pdb
-C:\Users\esdac\OneDrive - Escuela Politécnica Nacional\Universidad\7 Septimo semestre\Aplicaciones Distribuidas\Proyecto 1\Proyecto01_EstebanC_BrigethT\Servidor\obj\Debug\Servidor.csproj.AssemblyReference.cache
-C:\Users\esdac\OneDrive - Escuela Politécnica Nacional\Universidad\7 Septimo semestre\Aplicaciones Distribuidas\Proyecto 1\Proyecto01_EstebanC_BrigethT\Servidor\obj\Debug\Servidor.csproj.CoreCompileInputs.cache
-C:\Users\esdac\OneDrive - Escuela Politécnica Nacional\Universidad\7 Septimo semestre\Aplicaciones Distribuidas\Proyecto 1\Proyecto01_EstebanC_BrigethT\Servidor\obj\Debug\Servidor.exe
-C:\Users\esdac\OneDrive - Escuela Politécnica Nacional\Universidad\7 Septimo semestre\Aplicaciones Distribuidas\Proyecto 1\Proyecto01_EstebanC_BrigethT\Servidor\obj\Debug\Servidor.pdb

@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\esdac\\OneDrive - Escuela Polit\u00E9cnica Nacional\\Universidad\\7 Septimo semestre\\Aplicaciones Distribuidas\\Proyecto 1\\Proyecto01_EstebanC_BrigethT\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D3C7D7B3-F962-4848-98B4-FC746AAD5986}|Cliente\\Cliente.csproj|C:\\Users\\esdac\\OneDrive - Escuela Polit\u00E9cnica Nacional\\Universidad\\7 Septimo semestre\\Aplicaciones Distribuidas\\Proyecto 1\\Proyecto01_EstebanC_BrigethT\\cliente\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D3C7D7B3-F962-4848-98B4-FC746AAD5986}|Cliente\\Cliente.csproj|c:\\users\\esdac\\onedrive - escuela polit\u00E9cnica nacional\\universidad\\7 septimo semestre\\aplicaciones distribuidas\\proyecto 1\\proyecto01_estebanc_brigetht\\cliente\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D3C7D7B3-F962-4848-98B4-FC746AAD5986}|Cliente\\Cliente.csproj|solutionrelative:cliente\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2AA1D96-B290-478D-951C-5911EE7632F8}|Servidor\\Servidor.csproj|c:\\users\\esdac\\onedrive - escuela polit\u00E9cnica nacional\\universidad\\7 septimo semestre\\aplicaciones distribuidas\\proyecto 1\\proyecto01_estebanc_brigetht\\servidor\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B2AA1D96-B290-478D-951C-5911EE7632F8}|Servidor\\Servidor.csproj|C:\\Users\\esdac\\OneDrive - Escuela Polit\u00E9cnica Nacional\\Universidad\\7 Septimo semestre\\Aplicaciones Distribuidas\\Proyecto 1\\Proyecto01_EstebanC_BrigethT\\servidor\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2AA1D96-B290-478D-951C-5911EE7632F8}|Servidor\\Servidor.csproj|solutionrelative:servidor\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -28,7 +28,7 @@
               "RelativeDocumentMoniker": "Cliente\\Program.cs",
               "ToolTip": "C:\\Users\\esdac\\OneDrive - Escuela Polit\u00E9cnica Nacional\\Universidad\\7 Septimo semestre\\Aplicaciones Distribuidas\\Proyecto 1\\Proyecto01_EstebanC_BrigethT\\Cliente\\Program.cs",
               "RelativeToolTip": "Cliente\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAALkAAABZAAAA",
+              "ViewState": "AQIAAIQAAAAAAAAAAAAYwGcAAABWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-11T02:53:14.006Z",
               "EditorCaption": ""
@@ -43,8 +43,7 @@
               "RelativeToolTip": "Servidor\\Program.cs",
               "ViewState": "AQIAAF0AAAAAAAAAAAAYwGcAAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T02:47:57.79Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-11T02:47:57.79Z"
             }
           ]
         }
