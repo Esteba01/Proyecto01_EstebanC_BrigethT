@@ -1,2 +1,6 @@
-Daniel,2024-12-31,55,1.7,19.03,Normal
-Juan,2023-12-13,24.94756,1.8,7.70,Peso inferior al normal
+Daniel,2024-5-15,90.7184,2,22.68,Normal
+Lucho,2023-5-12,0.12,1.8,0.04,Peso inferior al normal
+Esteban,2024-12-4,14.17475,2,3.54,Peso inferior al normal
+Daniel,2024-06-11,55,1.8,16.98,Peso inferior al normal
+Pedro,2024-6-11,60,1.7,20.76,Normal
+Daniel,2024-6-11,90.7184,3.6576,6.78,Peso inferior al normal
